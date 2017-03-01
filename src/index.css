@@ -22,6 +22,7 @@ h1 {
 
 .machine {
 	margin: 40px auto;
+	width: 910px;
 	position: relative;
 }
 
@@ -186,6 +187,7 @@ h1 {
   background: #D33515;
   color: #fff;
   box-shadow: 0 6px #AC210E;
+  margin-right: 10px;
 }
 
 .button:hover {

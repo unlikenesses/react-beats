@@ -7,7 +7,7 @@ class Stave extends React.Component {
 		let that = this;
 		return (
 			<div className="stave">
-				<div className="staveName">{this.props.name} - {this.props.transporterPos}</div>
+				<div className="staveName">{this.props.name}</div>
 				{
 					this.props.notes.map(function(note, index) {
 						return <Note key={index} stave={that.props.id} transporterPos={that.props.transporterPos} pos={note.pos} active={note.active} toggleActive={that.props.toggleActive} />

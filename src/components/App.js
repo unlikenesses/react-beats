@@ -43,6 +43,21 @@ class App extends React.Component {
 						{'pos': 6, 'active': false},
 						{'pos': 7, 'active': false}
 					]
+				},
+				{
+					'id': 3,
+					'name': 'Hihat',
+					'sample': '../audio/Closed-Hi-Hat-1.mp3',
+					'notes': [
+						{'pos': 0, 'active': false},
+						{'pos': 1, 'active': false},
+						{'pos': 2, 'active': false},
+						{'pos': 3, 'active': false},
+						{'pos': 4, 'active': false},
+						{'pos': 5, 'active': false},
+						{'pos': 6, 'active': false},
+						{'pos': 7, 'active': false}
+					]
 				}
 			]
 		}
