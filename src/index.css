@@ -171,6 +171,10 @@ h1 {
 	bottom: 10px;
 }
 
+.credits a {
+	color: black;
+}
+
 /* BUTTONS */
 /* http://tympanus.net/codrops/2013/12/12/progress-button-styles/ */
 
