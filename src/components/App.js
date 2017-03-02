@@ -11,7 +11,7 @@ class App extends React.Component {
 		super();
 		this.state = {
 			transporterPos: 0,
-			tempo: 400,
+			bpm: 220,
 			playing: false,
 			staves: [
 				{
@@ -122,11 +122,11 @@ class App extends React.Component {
 	}
 
 	setTempo() {
-		this.timerId = setInterval(() => this.tick(), this.calculateTempo(this.state.tempo));
+		this.timerId = setInterval(() => this.tick(), this.calculateTempo(this.state.bpm));
 	}
 
-	changeTempo(tempo) {
-		this.setState({ tempo: tempo.target.value });
+	changeTempo(bpm) {
+		this.setState({ bpm: bpm.target.value });
 		if (this.state.playing) {
 			clearInterval(this.timerId);
 			this.setTempo();
@@ -156,7 +156,7 @@ class App extends React.Component {
   	render() {
 	    return (
 	      <div className="machine">
-	        <Controls tempo={this.state.tempo} handleChange={this.changeTempo} togglePlay={this.togglePlay} playing={this.state.playing} clearPattern={this.clearPattern} />
+	        <Controls bpm={this.state.bpm} handleChange={this.changeTempo} togglePlay={this.togglePlay} playing={this.state.playing} clearPattern={this.clearPattern} />
 	        <Staves transporterPos={this.state.transporterPos} staves={this.state.staves} toggleActive={this.toggleActive}/>
 	        <Transporter pos={this.state.transporterPos}/>
 	      </div>
