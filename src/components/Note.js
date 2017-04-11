@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Note extends React.Component {
 
@@ -18,6 +19,14 @@ class Note extends React.Component {
 			</div>
 		)
 	}
+}
+
+Note.propTypes = {
+	stave: PropTypes.number.isRequired,
+	transporterPos: PropTypes.number.isRequired,
+	pos: PropTypes.number.isRequired,
+	active: PropTypes.bool.isRequired,
+	toggleActive: PropTypes.func.isRequired
 }
 
 export default Note;

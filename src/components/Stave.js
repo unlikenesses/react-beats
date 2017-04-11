@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Note from './Note';
 
 class Stave extends React.Component {
@@ -16,6 +17,17 @@ class Stave extends React.Component {
 			</div>
 		)
 	}
+}
+
+Stave.propTypes = {
+	id: PropTypes.number.isRequired,
+	toggleActive: PropTypes.func.isRequired,
+	transporterPos: PropTypes.number.isRequired,
+	name: PropTypes.string.isRequired,
+	notes: PropTypes.arrayOf(PropTypes.shape({
+		pos: PropTypes.number.isRequired,
+		active: PropTypes.bool.isRequired
+	})).isRequired
 }
 
 export default Stave;

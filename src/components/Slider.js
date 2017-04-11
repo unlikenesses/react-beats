@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Slider extends React.Component {
 	render() {
@@ -8,6 +9,11 @@ class Slider extends React.Component {
 			</div>
 		)
 	}
+}
+
+Slider.propTypes = {
+	bpm: PropTypes.number.isRequired,
+	handleChange: PropTypes.func.isRequired
 }
 
 export default Slider;

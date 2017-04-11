@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TransporterBlank from './TransporterBlank';
 
 class Transporter extends React.Component {
@@ -19,6 +20,10 @@ class Transporter extends React.Component {
 			</div>
 		)
 	}
+}
+
+Transporter.propTypes = {
+	pos: PropTypes.number.isRequired
 }
 
 export default Transporter;
