@@ -74,6 +74,23 @@ class App extends React.Component {
 		clearInterval(this.timerId);
 	}
 
+	componentWillMount() {
+		let staves = this.state.staves;
+		for (var stave of staves) {
+			let localStorageRef = localStorage.getItem('rb-pattern-' + stave.id);
+			if (localStorageRef) {
+				stave.notes = JSON.parse(localStorageRef);
+			}
+		}
+	}
+
+	componentWillUpdate(nextProps, nextState) {
+		let staves = nextState.staves;
+		for (var stave of staves) {
+			localStorage.setItem('rb-pattern-' + stave.id, JSON.stringify(stave.notes));
+		}
+	}
+
 	toggleActive(staveId, pos) {
 		let staves = this.state.staves;
 		for (var stave of staves) {
