@@ -63,6 +63,10 @@ h1 {
 	background: #111;
 	width: 80px;
 	padding: 3px 8px 3px 8px;
+	border-left: 2px solid #222222;
+	border-right: 2px solid #454545;
+	border-top: 2px solid #212121;
+	border-bottom: 2px solid #565656;
 }
 
 .noteContainer {
@@ -109,7 +113,8 @@ h1 {
 	border: 3px solid #222;
 }
 
-.transportLight .hilight {
+.transportLight:after {
+	content: '';
 	width: 4px;
 	height: 4px;
 	border-radius: 50%;
@@ -126,7 +131,7 @@ h1 {
 	border: 3px solid rgba(0, 120, 0, 1);
 }
 
-.transportLightActive .hilight {
+.transportLightActive:after {
 	background-color: rgba(255,255,255,1);
 	box-shadow: 4px 4px 6px 7px rgba(0, 255, 0, 1);
 }
@@ -148,7 +153,8 @@ h1 {
 	border: 3px solid rgba(120, 0, 0, 1);
 }
 
-.note .hilight {
+.note:after {
+	content: '';
 	width: 4px;
 	height: 4px;
 	border-radius: 50%;
@@ -159,7 +165,7 @@ h1 {
 	box-shadow: 3px 4px 7px 9px rgba(180, 0, 0, 0.6);
 }
 
-.active .hilight {
+.active:after {
 	background-color: rgba(255,255,255,1);
 	box-shadow: 4px 4px 6px 7px rgba(255, 0, 0, 1);
 }

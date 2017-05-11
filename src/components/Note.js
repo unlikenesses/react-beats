@@ -15,7 +15,7 @@ class Note extends React.Component {
 	render() {
 		return (
 			<div className="noteContainer" onClick={this.handleClick}>
-				<div className={"note" + (this.props.active ? ' active' : '')}><div className="hilight"></div></div>
+				<div className={"note" + (this.props.active ? ' active' : '')}></div>
 			</div>
 		)
 	}
